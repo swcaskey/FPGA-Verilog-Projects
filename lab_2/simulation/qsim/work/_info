@@ -1,0 +1,90 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/user/Desktop/simulation/qsim
+vlab02_sc
+Z1 !s110 1789997913
+!i10b 1
+!s100 MMS`_aXKm=m^Og83dJ8D21
+I4N:0YUD4m_X[D9[NBDc9]2
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+R0
+w1789997912
+8lab02_sc.vo
+Flab02_sc.vo
+L0 32
+Z3 OV;L;10.3d;59
+r1
+!s85 0
+31
+!s108 1789997913.399456
+!s107 lab02_sc.vo|
+!s90 -work|work|lab02_sc.vo|
+!i113 1
+Z4 o-work work
+vlab02_sc_vlg_check_tst
+R1
+!i10b 1
+!s100 Rk<_7U1_hzGWCVLB>S`<61
+I27dnRb`R`XH@2BR7<Ze9j3
+R2
+R0
+Z5 w1789997911
+Z6 8lab02_sc.vwf.vt
+Z7 Flab02_sc.vwf.vt
+L0 58
+R3
+r1
+!s85 0
+31
+Z8 !s108 1789997913.422688
+Z9 !s107 lab02_sc.vwf.vt|
+Z10 !s90 -work|work|lab02_sc.vwf.vt|
+!i113 1
+R4
+vlab02_sc_vlg_sample_tst
+R1
+!i10b 1
+!s100 eMSU^G3Q^?S40V`^12]I[2
+IeVS1We2Kfz7:R0f17^J9B1
+R2
+R0
+R5
+R6
+R7
+L0 30
+R3
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R4
+vlab02_sc_vlg_vec_tst
+R1
+!i10b 1
+!s100 d`FL4[ze^NBEYW21]7Q^m3
+Inl0<5HkL>PHonVCFmDCKm2
+R2
+R0
+R5
+R6
+R7
+L0 260
+R3
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R4

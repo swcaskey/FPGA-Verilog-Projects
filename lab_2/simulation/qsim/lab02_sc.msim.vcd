@@ -1,0 +1,310 @@
+$comment
+	File created using the following command:
+		vcd file lab02_sc.msim.vcd -direction
+$end
+$date
+	Mon Sep 21 09:38:33 2026
+$end
+$version
+	ModelSim Version 10.3d
+$end
+$timescale
+	1ps
+$end
+
+$scope module lab02_sc_vlg_vec_tst $end
+$var reg 4 ! D [3:0] $end
+$var wire 1 " S [6] $end
+$var wire 1 # S [5] $end
+$var wire 1 $ S [4] $end
+$var wire 1 % S [3] $end
+$var wire 1 & S [2] $end
+$var wire 1 ' S [1] $end
+$var wire 1 ( S [0] $end
+$var wire 1 ) sampler $end
+
+$scope module i1 $end
+$var wire 1 * gnd $end
+$var wire 1 + vcc $end
+$var wire 1 , unknown $end
+$var tri1 1 - devclrn $end
+$var tri1 1 . devpor $end
+$var tri1 1 / devoe $end
+$var wire 1 0 S[0]~output_o $end
+$var wire 1 1 S[1]~output_o $end
+$var wire 1 2 S[2]~output_o $end
+$var wire 1 3 S[3]~output_o $end
+$var wire 1 4 S[4]~output_o $end
+$var wire 1 5 S[5]~output_o $end
+$var wire 1 6 S[6]~output_o $end
+$var wire 1 7 D[0]~input_o $end
+$var wire 1 8 D[3]~input_o $end
+$var wire 1 9 D[2]~input_o $end
+$var wire 1 : D[1]~input_o $end
+$var wire 1 ; S~0_combout $end
+$var wire 1 < S~1_combout $end
+$var wire 1 = S~2_combout $end
+$var wire 1 > S~3_combout $end
+$var wire 1 ? S~4_combout $end
+$var wire 1 @ S~5_combout $end
+$var wire 1 A S~6_combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 !
+0(
+0'
+0&
+0%
+0$
+0#
+1"
+x)
+0*
+1+
+x,
+1-
+1.
+1/
+00
+01
+02
+03
+04
+05
+16
+07
+08
+09
+0:
+0;
+0<
+0=
+0>
+0?
+0@
+1A
+$end
+#10000
+b1 !
+17
+0)
+1@
+1?
+1>
+1;
+10
+13
+14
+15
+1(
+1%
+1$
+1#
+#20000
+b11 !
+b10 !
+07
+1:
+1)
+0A
+0?
+0>
+1=
+0;
+00
+12
+03
+04
+06
+0(
+1&
+0%
+0$
+0"
+#30000
+b11 !
+17
+0)
+1?
+0=
+02
+14
+0&
+1$
+#40000
+b111 !
+b101 !
+b100 !
+07
+0:
+19
+1)
+0@
+1>
+1;
+10
+13
+05
+1(
+1%
+0#
+#50000
+b101 !
+17
+0)
+0>
+1<
+0;
+00
+11
+03
+0(
+1'
+0%
+#60000
+b111 !
+b110 !
+07
+1:
+1)
+0?
+04
+0$
+#70000
+b111 !
+17
+0)
+1A
+1@
+1?
+1>
+0<
+01
+13
+14
+15
+16
+0'
+1%
+1$
+1#
+1"
+#80000
+b1111 !
+b1011 !
+b1001 !
+b1000 !
+07
+0:
+09
+18
+1)
+0A
+0@
+0?
+0>
+03
+04
+05
+06
+0%
+0$
+0#
+0"
+#90000
+b1001 !
+17
+0)
+1?
+14
+1$
+#100000
+b1011 !
+b1010 !
+07
+1:
+1)
+0?
+1>
+13
+04
+1%
+0$
+#110000
+b1011 !
+17
+0)
+0>
+1<
+1;
+10
+11
+03
+1(
+1'
+0%
+#120000
+b1111 !
+b1101 !
+b1100 !
+07
+0:
+19
+1)
+1A
+1=
+0;
+00
+12
+16
+0(
+1&
+1"
+#130000
+b1101 !
+17
+0)
+0A
+1@
+0=
+0<
+1;
+10
+01
+02
+15
+06
+1(
+0'
+0&
+1#
+0"
+#140000
+b1111 !
+b1110 !
+07
+1:
+1)
+0@
+1=
+1<
+0;
+00
+11
+12
+05
+0(
+1'
+1&
+0#
+#150000
+b1111 !
+17
+0)
+1>
+13
+1%
+#160000

@@ -1,0 +1,52 @@
+module seven_segment_decoder (
+    input  wire [3:0] D,
+    output wire [6:0] S
+);
+
+    wire a, b, c, x;
+
+    assign a = D[3];
+    assign b = D[2];
+    assign c = D[1];
+    assign x = D[0];
+
+    // Segment a
+    assign S[0] = (~a & ~b & ~c &  x)
+                | (~a &  b & ~c & ~x)
+                | ( a & ~b &  c &  x)
+                | ( a &  b & ~c &  x);
+
+    // Segment b
+    assign S[1] = ( b &  c & ~x)
+                | (~a &  b & ~c & x)
+                | ( a &  c &  x)
+                | ( a &  b & ~x);
+
+    // Segment c
+    assign S[2] = (~a & ~b & c & ~x)
+                | ( a &  b & ~x)
+                | ( a &  b &  c);
+
+    // Segment d
+    assign S[3] = ( b &  c &  x)
+                | (~a & ~b & ~c &  x)
+                | (~a &  b & ~c & ~x)
+                | ( a & ~b &  c & ~x);
+
+    // Segment e
+    assign S[4] = (~b & ~c & x)
+                | (~a & x)
+                | (~a & b & ~c);
+
+    // Segment f
+    assign S[5] = (~a &  c & x)
+                | (~a & ~b & x)
+                | (~a & ~b & c)
+                | ( a &  b & ~c & x);
+
+    // Segment g
+    assign S[6] = (~a & ~b & ~c)
+                | (~a &  b &  c & x)
+                | ( a &  b & ~c & ~x);
+
+endmodule

@@ -1,0 +1,42 @@
+# do lab02_sc.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 09:38:33 on Sep 21,2026
+# vlog -work work lab02_sc.vo 
+# -- Compiling module lab02_sc
+# 
+# Top level modules:
+# 	lab02_sc
+# End time: 09:38:33 on Sep 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 09:38:33 on Sep 21,2026
+# vlog -work work lab02_sc.vwf.vt 
+# -- Compiling module lab02_sc_vlg_sample_tst
+# -- Compiling module lab02_sc_vlg_check_tst
+# -- Compiling module lab02_sc_vlg_vec_tst
+# 
+# Top level modules:
+# 	lab02_sc_vlg_vec_tst
+# End time: 09:38:33 on Sep 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -do "lab02_sc.do" 
+# Start time: 09:38:33 on Sep 21,2026
+# Loading work.lab02_sc_vlg_vec_tst
+# Loading work.lab02_sc
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading work.lab02_sc_vlg_sample_tst
+# Loading work.lab02_sc_vlg_check_tst
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# ** Warning: (vsim-3116) Problem reading symbols from /lib/i386-linux-gnu/libpthread.so.0 : module was loaded at an absolute address.
+# ** Warning: (vsim-3116) Problem reading symbols from /lib/i386-linux-gnu/libdl.so.2 : module was loaded at an absolute address.
+# ** Warning: (vsim-3116) Problem reading symbols from /lib/i386-linux-gnu/libm.so.6 : module was loaded at an absolute address.
+# ** Warning: (vsim-3116) Problem reading symbols from /lib/i386-linux-gnu/librt.so.1 : module was loaded at an absolute address.
+# ** Warning: (vsim-3116) Problem reading symbols from /lib/i386-linux-gnu/libc.so.6 : module was loaded at an absolute address.
+# ** Warning: (vsim-3116) Problem reading symbols from /lib/ld-linux.so.2 : module was loaded at an absolute address.
+# Simulation passed !
+# ** Note: $finish    : lab02_sc.vwf.vt(256)
+#    Time: 160 ns  Iteration: 0  Instance: /lab02_sc_vlg_vec_tst/tb_out
+# End time: 09:38:33 on Sep 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 7
