@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab02_sc
-Mon Sep 21 09:47:25 2026
+Tue Sep 22 12:28:02 2026
 Quartus II 64-Bit Version 15.0.2 Build 153 07/15/2015 SJ Web Edition
 
 
@@ -43,7 +43,7 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Sep 21 09:47:25 2026      ;
+; Analysis & Synthesis Status        ; Successful - Tue Sep 22 12:28:02 2026      ;
 ; Quartus II 64-Bit Version          ; 15.0.2 Build 153 07/15/2015 SJ Web Edition ;
 ; Revision Name                      ; lab02_sc                                   ;
 ; Top-level Entity Name              ; lab02_sc                                   ;
@@ -254,7 +254,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 15.0.2 Build 153 07/15/2015 SJ Web Edition
-    Info: Processing started: Mon Sep 21 09:47:16 2026
+    Info: Processing started: Tue Sep 22 12:27:53 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab02_sc -c lab02_sc
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file lab02_sc.v
@@ -268,8 +268,8 @@ Info (21057): Implemented 18 device resources after synthesis - the final resour
     Info (21059): Implemented 7 output pins
     Info (21061): Implemented 7 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 973 megabytes
-    Info: Processing ended: Mon Sep 21 09:47:25 2026
+    Info: Peak virtual memory: 971 megabytes
+    Info: Processing ended: Tue Sep 22 12:28:02 2026
     Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:20
 
