@@ -1,0 +1,72 @@
+|Game_sec_02
+s0 <= room:inst2.s0
+clk => room:inst2.clk
+clk => sword:inst.clk
+reset => room:inst2.reset
+reset => sword:inst.reset
+n => room:inst2.n
+s => room:inst2.s
+e => room:inst2.e
+w => room:inst2.w
+s1 <= room:inst2.s1
+s2 <= room:inst2.s2
+s3 <= room:inst2.s3
+s4 <= room:inst2.s4
+s5 <= room:inst2.s5
+s6 <= room:inst2.s6
+win <= room:inst2.win
+sw <= room:inst2.sw
+d <= room:inst2.d
+v <= sword:inst.v
+
+
+|Game_sec_02|room:inst2
+clk => state[0].CLK
+clk => state[1].CLK
+clk => state[2].CLK
+clk => state[3].CLK
+clk => state[4].CLK
+clk => state[5].CLK
+clk => state[6].CLK
+reset => state.OUTPUTSELECT
+reset => state.OUTPUTSELECT
+reset => state.OUTPUTSELECT
+reset => state.OUTPUTSELECT
+reset => state.OUTPUTSELECT
+reset => state.OUTPUTSELECT
+reset => state.OUTPUTSELECT
+n => next_state.IN1
+n => next_state.IN0
+s => next_state.IN0
+s => next_state.IN1
+e => next_state.IN1
+e => next_state.IN1
+e => next_state.IN1
+e => next_state[4].IN1
+e => next_state.IN1
+e => next_state.IN1
+w => next_state.IN1
+w => next_state.IN1
+w => next_state.IN1
+w => next_state.IN1
+v => next_state.IN1
+v => next_state.IN1
+s0 <= state[0].DB_MAX_OUTPUT_PORT_TYPE
+s1 <= state[1].DB_MAX_OUTPUT_PORT_TYPE
+s2 <= state[2].DB_MAX_OUTPUT_PORT_TYPE
+s3 <= state[3].DB_MAX_OUTPUT_PORT_TYPE
+s4 <= state[4].DB_MAX_OUTPUT_PORT_TYPE
+s5 <= state[5].DB_MAX_OUTPUT_PORT_TYPE
+s6 <= state[6].DB_MAX_OUTPUT_PORT_TYPE
+sw <= state[3].DB_MAX_OUTPUT_PORT_TYPE
+win <= state[5].DB_MAX_OUTPUT_PORT_TYPE
+d <= state[6].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Game_sec_02|sword:inst
+v <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clk => inst.CLK
+reset => inst3.IN0
+sw => inst1.IN1
+
+
