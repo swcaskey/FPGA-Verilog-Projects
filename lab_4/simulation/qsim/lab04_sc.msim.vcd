@@ -1,0 +1,790 @@
+$comment
+	File created using the following command:
+		vcd file lab04_sc.msim.vcd -direction
+$end
+$date
+	Mon Oct  5 11:10:54 2026
+$end
+$version
+	ModelSim Version 10.3d
+$end
+$timescale
+	1ps
+$end
+
+$scope module game_vlg_vec_tst $end
+$var reg 1 ! clk $end
+$var reg 1 " e $end
+$var reg 1 # n $end
+$var reg 1 $ reset $end
+$var reg 1 % s $end
+$var reg 1 & w $end
+$var wire 1 ' d $end
+$var wire 1 ( s0 $end
+$var wire 1 ) s1 $end
+$var wire 1 * s2 $end
+$var wire 1 + s3 $end
+$var wire 1 , s4 $end
+$var wire 1 - s5 $end
+$var wire 1 . s6 $end
+$var wire 1 / sw $end
+$var wire 1 0 v $end
+$var wire 1 1 win $end
+$var wire 1 2 sampler $end
+
+$scope module i1 $end
+$var wire 1 3 gnd $end
+$var wire 1 4 vcc $end
+$var wire 1 5 unknown $end
+$var tri1 1 6 devclrn $end
+$var tri1 1 7 devpor $end
+$var tri1 1 8 devoe $end
+$var wire 1 9 s6~output_o $end
+$var wire 1 : win~output_o $end
+$var wire 1 ; s5~output_o $end
+$var wire 1 < d~output_o $end
+$var wire 1 = s4~output_o $end
+$var wire 1 > s3~output_o $end
+$var wire 1 ? sw~output_o $end
+$var wire 1 @ s2~output_o $end
+$var wire 1 A s1~output_o $end
+$var wire 1 B s0~output_o $end
+$var wire 1 C v~output_o $end
+$var wire 1 D clk~input_o $end
+$var wire 1 E clk~inputclkctrl_outclk $end
+$var wire 1 F reset~input_o $end
+$var wire 1 G w~input_o $end
+$var wire 1 H e~input_o $end
+$var wire 1 I s~input_o $end
+$var wire 1 J n~input_o $end
+$var wire 1 K room_fsm|move_w~0_combout $end
+$var wire 1 L room_fsm|move_e~0_combout $end
+$var wire 1 M room_fsm|next_state[3]~5_combout $end
+$var wire 1 N room_fsm|next_state[2]~10_combout $end
+$var wire 1 O room_fsm|next_state~11_combout $end
+$var wire 1 P room_fsm|next_state[2]~8_combout $end
+$var wire 1 Q room_fsm|next_state[0]~16_combout $end
+$var wire 1 R room_fsm|ff_s0|q~q $end
+$var wire 1 S room_fsm|next_state[1]~13_combout $end
+$var wire 1 T room_fsm|next_state[1]~14_combout $end
+$var wire 1 U room_fsm|next_state[1]~15_combout $end
+$var wire 1 V room_fsm|ff_s1|q~q $end
+$var wire 1 W room_fsm|next_state[2]~7_combout $end
+$var wire 1 X room_fsm|next_state[2]~9_combout $end
+$var wire 1 Y room_fsm|next_state[2]~12_combout $end
+$var wire 1 Z room_fsm|ff_s2|q~q $end
+$var wire 1 [ room_fsm|next_state[4]~4_combout $end
+$var wire 1 \ room_fsm|next_state[3]~6_combout $end
+$var wire 1 ] room_fsm|ff_s3|q~q $end
+$var wire 1 ^ sword_fsm|next_sword~0_combout $end
+$var wire 1 _ sword_fsm|ff_sword|q~q $end
+$var wire 1 ` room_fsm|move_se~0_combout $end
+$var wire 1 a room_fsm|ff_s4|q~q $end
+$var wire 1 b room_fsm|next_state[6]~2_combout $end
+$var wire 1 c room_fsm|ff_s6|q~q $end
+$var wire 1 d room_fsm|next_state[5]~3_combout $end
+$var wire 1 e room_fsm|ff_s5|q~q $end
+$var wire 1 f room_fsm|next_state [6] $end
+$var wire 1 g room_fsm|next_state [5] $end
+$var wire 1 h room_fsm|next_state [4] $end
+$var wire 1 i room_fsm|next_state [3] $end
+$var wire 1 j room_fsm|next_state [2] $end
+$var wire 1 k room_fsm|next_state [1] $end
+$var wire 1 l room_fsm|next_state [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+1$
+0%
+0&
+0'
+0(
+0)
+0*
+0+
+0,
+0-
+0.
+0/
+00
+01
+x2
+03
+14
+x5
+16
+17
+18
+09
+0:
+0;
+0<
+0=
+0>
+0?
+0@
+0A
+0B
+0C
+0D
+0E
+1F
+0G
+0H
+0I
+0J
+0K
+0L
+0M
+1N
+0O
+0P
+0Q
+0R
+1S
+0T
+0U
+0V
+0W
+0X
+0Y
+0Z
+0[
+0\
+0]
+0^
+0_
+0`
+0a
+0b
+0c
+0d
+0e
+1l
+zk
+zj
+zi
+0h
+zg
+zf
+$end
+#10000
+1!
+1D
+02
+1E
+1R
+1B
+1Q
+1(
+#20000
+1"
+0$
+0!
+1H
+0F
+0D
+12
+0E
+1L
+0Q
+1U
+0l
+#30000
+1!
+1D
+02
+1E
+1V
+0R
+0B
+1A
+1W
+0(
+1)
+0U
+1T
+1U
+#40000
+1%
+0"
+0!
+1I
+0H
+0D
+12
+0E
+1`
+0S
+1P
+0L
+0T
+1X
+0U
+1Y
+#50000
+1!
+1D
+02
+1E
+1Z
+0V
+0A
+1@
+1[
+0W
+0)
+1*
+0X
+#60000
+1&
+0%
+0!
+1G
+0I
+0D
+12
+0E
+0`
+0P
+0N
+1K
+0Y
+1\
+#70000
+1!
+1D
+02
+1E
+1]
+0Z
+0@
+1>
+1?
+1M
+0[
+0*
+1+
+1/
+1^
+#80000
+1"
+0&
+0!
+1H
+0G
+0D
+12
+0E
+1S
+1N
+1L
+0K
+1X
+0\
+1Y
+#90000
+1!
+1D
+02
+1E
+1_
+0]
+1Z
+1@
+0>
+0?
+1C
+0M
+1[
+1*
+0+
+0/
+10
+0X
+#100000
+1%
+0!
+1I
+0D
+12
+0E
+1`
+0N
+0L
+1h
+0Y
+#110000
+1!
+1D
+02
+1E
+1a
+0Z
+0@
+1=
+0[
+0*
+1,
+1d
+0h
+#120000
+0"
+0%
+0!
+0H
+0I
+0D
+12
+0E
+1N
+0`
+#130000
+1!
+1D
+02
+1E
+1e
+0a
+0=
+1:
+1;
+0,
+11
+1-
+#140000
+0!
+0D
+12
+0E
+#150000
+1!
+1D
+02
+1E
+#160000
+0!
+0D
+12
+0E
+#170000
+1!
+1D
+02
+1E
+#180000
+0!
+0D
+12
+0E
+#190000
+1!
+1D
+02
+1E
+#200000
+0!
+0D
+12
+0E
+#210000
+1!
+1D
+02
+1E
+#220000
+0!
+0D
+12
+0E
+#230000
+1!
+1D
+02
+1E
+#240000
+0!
+0D
+12
+0E
+#250000
+1!
+1D
+02
+1E
+#260000
+0!
+0D
+12
+0E
+#270000
+1!
+1D
+02
+1E
+#280000
+0!
+0D
+12
+0E
+#290000
+1!
+1D
+02
+1E
+#300000
+0!
+0D
+12
+0E
+#310000
+1!
+1D
+02
+1E
+#320000
+0!
+0D
+12
+0E
+#330000
+1!
+1D
+02
+1E
+#340000
+0!
+0D
+12
+0E
+#350000
+1!
+1D
+02
+1E
+#360000
+0!
+0D
+12
+0E
+#370000
+1!
+1D
+02
+1E
+#380000
+0!
+0D
+12
+0E
+#390000
+1!
+1D
+02
+1E
+#400000
+0!
+0D
+12
+0E
+#410000
+1!
+1D
+02
+1E
+#420000
+0!
+0D
+12
+0E
+#430000
+1!
+1D
+02
+1E
+#440000
+0!
+0D
+12
+0E
+#450000
+1!
+1D
+02
+1E
+#460000
+0!
+0D
+12
+0E
+#470000
+1!
+1D
+02
+1E
+#480000
+0!
+0D
+12
+0E
+#490000
+1!
+1D
+02
+1E
+#500000
+0!
+0D
+12
+0E
+#510000
+1!
+1D
+02
+1E
+#520000
+0!
+0D
+12
+0E
+#530000
+1!
+1D
+02
+1E
+#540000
+0!
+0D
+12
+0E
+#550000
+1!
+1D
+02
+1E
+#560000
+0!
+0D
+12
+0E
+#570000
+1!
+1D
+02
+1E
+#580000
+0!
+0D
+12
+0E
+#590000
+1!
+1D
+02
+1E
+#600000
+0!
+0D
+12
+0E
+#610000
+1!
+1D
+02
+1E
+#620000
+0!
+0D
+12
+0E
+#630000
+1!
+1D
+02
+1E
+#640000
+0!
+0D
+12
+0E
+#650000
+1!
+1D
+02
+1E
+#660000
+0!
+0D
+12
+0E
+#670000
+1!
+1D
+02
+1E
+#680000
+0!
+0D
+12
+0E
+#690000
+1!
+1D
+02
+1E
+#700000
+0!
+0D
+12
+0E
+#710000
+1!
+1D
+02
+1E
+#720000
+0!
+0D
+12
+0E
+#730000
+1!
+1D
+02
+1E
+#740000
+0!
+0D
+12
+0E
+#750000
+1!
+1D
+02
+1E
+#760000
+0!
+0D
+12
+0E
+#770000
+1!
+1D
+02
+1E
+#780000
+0!
+0D
+12
+0E
+#790000
+1!
+1D
+02
+1E
+#800000
+0!
+0D
+12
+0E
+#810000
+1!
+1D
+02
+1E
+#820000
+0!
+0D
+12
+0E
+#830000
+1!
+1D
+02
+1E
+#840000
+0!
+0D
+12
+0E
+#850000
+1!
+1D
+02
+1E
+#860000
+0!
+0D
+12
+0E
+#870000
+1!
+1D
+02
+1E
+#880000
+0!
+0D
+12
+0E
+#890000
+1!
+1D
+02
+1E
+#900000
+0!
+0D
+12
+0E
+#910000
+1!
+1D
+02
+1E
+#920000
+0!
+0D
+12
+0E
+#930000
+1!
+1D
+02
+1E
+#940000
+0!
+0D
+12
+0E
+#950000
+1!
+1D
+02
+1E
+#960000
+0!
+0D
+12
+0E
+#970000
+1!
+1D
+02
+1E
+#980000
+0!
+0D
+12
+0E
+#990000
+1!
+1D
+02
+1E
+#1000000

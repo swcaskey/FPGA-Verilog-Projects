@@ -1,0 +1,119 @@
+|game
+clk => clk.IN2
+n => n.IN1
+s => s.IN1
+e => e.IN1
+w => w.IN1
+reset => reset.IN2
+s6 << room:room_fsm.s6
+win << room:room_fsm.win
+s5 << room:room_fsm.s5
+d << room:room_fsm.d
+s4 << room:room_fsm.s4
+s3 << room:room_fsm.s3
+sw << sw.DB_MAX_OUTPUT_PORT_TYPE
+s2 << room:room_fsm.s2
+s1 << room:room_fsm.s1
+s0 << room:room_fsm.s0
+v << v.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|game|room:room_fsm
+clk => clk.IN7
+n => move_n.IN0
+n => move_s.IN0
+n => move_e.IN0
+n => move_w.IN0
+n => move_se.IN0
+s => move_s.IN1
+s => move_se.IN1
+s => move_n.IN1
+s => move_e.IN1
+s => move_w.IN1
+e => move_e.IN1
+e => move_se.IN1
+e => move_n.IN1
+e => move_s.IN1
+e => move_w.IN1
+w => move_w.IN1
+w => move_n.IN1
+w => move_s.IN1
+w => move_e.IN1
+w => move_se.IN1
+v => next_state.IN1
+v => next_state.IN1
+reset => next_state.IN1
+reset => next_state.IN1
+reset => next_state.IN1
+reset => next_state.IN1
+reset => next_state.IN1
+reset => next_state.IN1
+reset => next_state.IN1
+reset => next_state.IN1
+s6 <= d_ff:ff_s6.q
+win <= d_ff:ff_s5.q
+s5 <= d_ff:ff_s5.q
+d <= d_ff:ff_s6.q
+s4 <= d_ff:ff_s4.q
+s3 <= d_ff:ff_s3.q
+sw <= d_ff:ff_s3.q
+s2 <= d_ff:ff_s2.q
+s1 <= d_ff:ff_s1.q
+s0 <= d_ff:ff_s0.q
+
+
+|game|room:room_fsm|d_ff:ff_s0
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|game|room:room_fsm|d_ff:ff_s1
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|game|room:room_fsm|d_ff:ff_s2
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|game|room:room_fsm|d_ff:ff_s3
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|game|room:room_fsm|d_ff:ff_s4
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|game|room:room_fsm|d_ff:ff_s5
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|game|room:room_fsm|d_ff:ff_s6
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|game|sword:sword_fsm
+sw => next_sword.IN1
+reset => next_sword.IN1
+clk => clk.IN1
+v <= d_ff:ff_sword.q
+
+
+|game|sword:sword_fsm|d_ff:ff_sword
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
