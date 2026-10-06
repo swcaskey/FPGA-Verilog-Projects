@@ -3,7 +3,20 @@ module room (
     output logic s6, win, s5, d, s4, s3, sw, s2, s1, s0
 );
     logic move_n, move_s, move_e, move_w, move_se;
-    logic [6:0] next_state;
+    logic [6:0] next_state, raw_next_state;
+    logic valid_state;
+
+    // Recover from zero-hot or multi-hot state corruption on the next clock.
+    // case also selects the recovery path for unknown state bits in simulation.
+    always_comb begin
+        case ({s6, s5, s4, s3, s2, s1, s0})
+            7'b0000001, 7'b0000010, 7'b0000100, 7'b0001000,
+            7'b0010000, 7'b0100000, 7'b1000000: valid_state = 1'b1;
+            default: valid_state = 1'b0;
+        endcase
+    end
+
+    assign next_state = valid_state ? raw_next_state : 7'b0000001;
 
     // The legal combinations as all other direction combinations are ignored
     assign move_n  =  n & ~s & ~e & ~w;
@@ -14,19 +27,19 @@ module room (
 
     // One-hot state bits
     // Active-high synchronous reset takes over movement and selects s0
-    assign next_state[0] = reset | (~reset &
+    assign raw_next_state[0] = reset | (~reset &
         ((s1 & move_w) | (s0 & ~move_e)));
-    assign next_state[1] = ~reset &
+    assign raw_next_state[1] = ~reset &
         ((s0 & move_e) | (s2 & move_n) |
          (s1 & ~(move_w | move_s)));
-    assign next_state[2] = ~reset &
+    assign raw_next_state[2] = ~reset &
         ((s1 & move_s) | (s3 & move_e) |
          (s2 & ~(move_n | move_w | move_se)));
-    assign next_state[3] = ~reset &
+    assign raw_next_state[3] = ~reset &
         ((s2 & move_w) | (s3 & ~move_e));
-    assign next_state[4] = ~reset & s2 & move_se;
-    assign next_state[5] = ~reset & ((s4 & v) | s5);
-    assign next_state[6] = ~reset & ((s4 & ~v) | s6);
+    assign raw_next_state[4] = ~reset & s2 & move_se;
+    assign raw_next_state[5] = ~reset & ((s4 & v) | s5);
+    assign raw_next_state[6] = ~reset & ((s4 & ~v) | s6);
 
     // 7 flip-flop instances
     d_ff ff_s0 (.d(next_state[0]), .clk(clk), .q(s0));
