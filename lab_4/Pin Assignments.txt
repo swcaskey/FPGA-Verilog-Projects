@@ -1,0 +1,25 @@
+Assignments → Pin Planner
+
+
+Signal   Board       Pin         I/O Standard
+------   --------    ---------   ------------
+clk      CLOCK_50    PIN_Y2      3.3-V LVTTL
+
+n        SW0         PIN_AB28    2.5 V*
+s        SW1         PIN_AC28    2.5 V*
+e        SW2         PIN_AC27    2.5 V*
+w        SW3         PIN_AD27    2.5 V*
+reset    SW4         PIN_AB27    2.5 V*
+
+s0       LEDR0       PIN_G19     2.5 V
+s1       LEDR1       PIN_F19     2.5 V
+s2       LEDR2       PIN_E19     2.5 V
+s3       LEDR3       PIN_F21     2.5 V
+s4       LEDR4       PIN_F18     2.5 V
+s5       LEDR5       PIN_E18     2.5 V
+s6       LEDR6       PIN_J19     2.5 V
+
+win      LEDG0       PIN_E21     2.5 V
+d        LEDG1       PIN_E22     2.5 V
+sw       LEDG2       PIN_E25     2.5 V
+v        LEDG3       PIN_E24     2.5 V
