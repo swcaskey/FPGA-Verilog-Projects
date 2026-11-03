@@ -1,0 +1,333 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, the Altera Quartus II License Agreement,
+# the Altera MegaCore Function License Agreement, or other 
+# applicable license agreement, including, without limitation, 
+# that your use is for the sole purpose of programming logic 
+# devices manufactured by Altera and sold by Altera or its 
+# authorized distributors.  Please refer to the applicable 
+# agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 15.0.2 Build 153 07/15/2015 SJ Web Edition
+# Date created = 11:06:20  November 03, 2026
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		swc70_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE115F29C7
+set_global_assignment -name TOP_LEVEL_ENTITY top
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 15.0.2
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:06:20  NOVEMBER 03, 2026"
+set_global_assignment -name LAST_QUARTUS_VERSION 15.0.2
+set_global_assignment -name SYSTEMVERILOG_FILE top.sv
+set_global_assignment -name SYSTEMVERILOG_FILE sign_extend.sv
+set_global_assignment -name SYSTEMVERILOG_FILE seven_segment.sv
+set_global_assignment -name SYSTEMVERILOG_FILE register_file.sv
+set_global_assignment -name SYSTEMVERILOG_FILE MUX_RegDst.sv
+set_global_assignment -name SYSTEMVERILOG_FILE MUX_MemtoReg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE MUX_ALUSrc.sv
+set_global_assignment -name SYSTEMVERILOG_FILE display.sv
+set_global_assignment -name SYSTEMVERILOG_FILE data_memory.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ALU.sv
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (SystemVerilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "SYSTEMVERILOG HDL" -section_id eda_simulation
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VECTOR_WAVEFORM_FILE waveform_top.vwf
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+# DE2-115 board assignments. Factory JP7 = 2.5 V; JP6 = 3.3 V.
+# KEY1 is the manual clock (rising edge when released). KEY0 resets active low.
+# SW2..0 select: 001 ADD, 010 SUB, 011 LW, 100 SW, 000 idle.
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
+
+# Board controls and six seven-segment displays.
+set_location_assignment PIN_M21 -to clk
+set_instance_assignment -name IO_STANDARD "2.5 V" -to clk
+set_location_assignment PIN_M23 -to rst
+set_instance_assignment -name IO_STANDARD "2.5 V" -to rst
+set_location_assignment PIN_AB28 -to sw[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to sw[0]
+set_location_assignment PIN_AC28 -to sw[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to sw[1]
+set_location_assignment PIN_AC27 -to sw[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to sw[2]
+set_location_assignment PIN_G18 -to HEX0[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to HEX0[0]
+set_location_assignment PIN_F22 -to HEX0[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to HEX0[1]
+set_location_assignment PIN_E17 -to HEX0[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to HEX0[2]
+set_location_assignment PIN_L26 -to HEX0[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to HEX0[3]
+set_location_assignment PIN_L25 -to HEX0[4]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to HEX0[4]
+set_location_assignment PIN_J22 -to HEX0[5]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to HEX0[5]
+set_location_assignment PIN_H22 -to HEX0[6]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to HEX0[6]
+set_location_assignment PIN_M24 -to HEX1[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to HEX1[0]
+set_location_assignment PIN_Y22 -to HEX1[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to HEX1[1]
+set_location_assignment PIN_W21 -to HEX1[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to HEX1[2]
+set_location_assignment PIN_W22 -to HEX1[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to HEX1[3]
+set_location_assignment PIN_W25 -to HEX1[4]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to HEX1[4]
+set_location_assignment PIN_U23 -to HEX1[5]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to HEX1[5]
+set_location_assignment PIN_U24 -to HEX1[6]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to HEX1[6]
+set_location_assignment PIN_AA25 -to HEX2[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to HEX2[0]
+set_location_assignment PIN_AA26 -to HEX2[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to HEX2[1]
+set_location_assignment PIN_Y25 -to HEX2[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to HEX2[2]
+set_location_assignment PIN_W26 -to HEX2[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to HEX2[3]
+set_location_assignment PIN_Y26 -to HEX2[4]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to HEX2[4]
+set_location_assignment PIN_W27 -to HEX2[5]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to HEX2[5]
+set_location_assignment PIN_W28 -to HEX2[6]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to HEX2[6]
+set_location_assignment PIN_V21 -to HEX3[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to HEX3[0]
+set_location_assignment PIN_U21 -to HEX3[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to HEX3[1]
+set_location_assignment PIN_AB20 -to HEX3[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[2]
+set_location_assignment PIN_AA21 -to HEX3[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[3]
+set_location_assignment PIN_AD24 -to HEX3[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[4]
+set_location_assignment PIN_AF23 -to HEX3[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[5]
+set_location_assignment PIN_Y19 -to HEX3[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[6]
+set_location_assignment PIN_AB19 -to HEX4[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[0]
+set_location_assignment PIN_AA19 -to HEX4[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[1]
+set_location_assignment PIN_AG21 -to HEX4[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[2]
+set_location_assignment PIN_AH21 -to HEX4[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[3]
+set_location_assignment PIN_AE19 -to HEX4[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[4]
+set_location_assignment PIN_AF19 -to HEX4[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[5]
+set_location_assignment PIN_AE18 -to HEX4[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[6]
+set_location_assignment PIN_AD18 -to HEX5[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[0]
+set_location_assignment PIN_AC18 -to HEX5[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[1]
+set_location_assignment PIN_AB18 -to HEX5[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[2]
+set_location_assignment PIN_AH19 -to HEX5[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[3]
+set_location_assignment PIN_AG19 -to HEX5[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[4]
+set_location_assignment PIN_AF18 -to HEX5[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[5]
+set_location_assignment PIN_AH18 -to HEX5[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[6]
+
+# Debug outputs remain available for waveform simulation.
+# Virtual pins use no physical board pins.
+set_instance_assignment -name VIRTUAL_PIN ON -to ALUResult[0]
+set_instance_assignment -name VIRTUAL_PIN ON -to ALUResult[1]
+set_instance_assignment -name VIRTUAL_PIN ON -to ALUResult[2]
+set_instance_assignment -name VIRTUAL_PIN ON -to ALUResult[3]
+set_instance_assignment -name VIRTUAL_PIN ON -to ALUResult[4]
+set_instance_assignment -name VIRTUAL_PIN ON -to ALUResult[5]
+set_instance_assignment -name VIRTUAL_PIN ON -to ALUResult[6]
+set_instance_assignment -name VIRTUAL_PIN ON -to ALUResult[7]
+set_instance_assignment -name VIRTUAL_PIN ON -to ALUResult[8]
+set_instance_assignment -name VIRTUAL_PIN ON -to ALUResult[9]
+set_instance_assignment -name VIRTUAL_PIN ON -to ALUResult[10]
+set_instance_assignment -name VIRTUAL_PIN ON -to ALUResult[11]
+set_instance_assignment -name VIRTUAL_PIN ON -to ALUResult[12]
+set_instance_assignment -name VIRTUAL_PIN ON -to ALUResult[13]
+set_instance_assignment -name VIRTUAL_PIN ON -to ALUResult[14]
+set_instance_assignment -name VIRTUAL_PIN ON -to ALUResult[15]
+set_instance_assignment -name VIRTUAL_PIN ON -to ALUResult[16]
+set_instance_assignment -name VIRTUAL_PIN ON -to ALUResult[17]
+set_instance_assignment -name VIRTUAL_PIN ON -to ALUResult[18]
+set_instance_assignment -name VIRTUAL_PIN ON -to ALUResult[19]
+set_instance_assignment -name VIRTUAL_PIN ON -to ALUResult[20]
+set_instance_assignment -name VIRTUAL_PIN ON -to ALUResult[21]
+set_instance_assignment -name VIRTUAL_PIN ON -to ALUResult[22]
+set_instance_assignment -name VIRTUAL_PIN ON -to ALUResult[23]
+set_instance_assignment -name VIRTUAL_PIN ON -to ALUResult[24]
+set_instance_assignment -name VIRTUAL_PIN ON -to ALUResult[25]
+set_instance_assignment -name VIRTUAL_PIN ON -to ALUResult[26]
+set_instance_assignment -name VIRTUAL_PIN ON -to ALUResult[27]
+set_instance_assignment -name VIRTUAL_PIN ON -to ALUResult[28]
+set_instance_assignment -name VIRTUAL_PIN ON -to ALUResult[29]
+set_instance_assignment -name VIRTUAL_PIN ON -to ALUResult[30]
+set_instance_assignment -name VIRTUAL_PIN ON -to ALUResult[31]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD1[0]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD1[1]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD1[2]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD1[3]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD1[4]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD1[5]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD1[6]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD1[7]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD1[8]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD1[9]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD1[10]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD1[11]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD1[12]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD1[13]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD1[14]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD1[15]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD1[16]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD1[17]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD1[18]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD1[19]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD1[20]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD1[21]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD1[22]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD1[23]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD1[24]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD1[25]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD1[26]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD1[27]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD1[28]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD1[29]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD1[30]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD1[31]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD2[0]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD2[1]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD2[2]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD2[3]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD2[4]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD2[5]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD2[6]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD2[7]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD2[8]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD2[9]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD2[10]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD2[11]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD2[12]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD2[13]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD2[14]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD2[15]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD2[16]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD2[17]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD2[18]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD2[19]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD2[20]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD2[21]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD2[22]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD2[23]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD2[24]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD2[25]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD2[26]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD2[27]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD2[28]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD2[29]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD2[30]
+set_instance_assignment -name VIRTUAL_PIN ON -to RD2[31]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode_register_file[0]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode_register_file[1]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode_register_file[2]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode_register_file[3]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode_register_file[4]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode_register_file[5]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode_register_file[6]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode_register_file[7]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode_register_file[8]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode_register_file[9]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode_register_file[10]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode_register_file[11]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode_register_file[12]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode_register_file[13]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode_register_file[14]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode_register_file[15]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode_register_file[16]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode_register_file[17]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode_register_file[18]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode_register_file[19]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode_register_file[20]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode_register_file[21]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode_register_file[22]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode_register_file[23]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode_register_file[24]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode_register_file[25]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode_register_file[26]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode_register_file[27]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode_register_file[28]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode_register_file[29]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode_register_file[30]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode_register_file[31]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode[0]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode[1]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode[2]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode[3]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode[4]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode[5]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode[6]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode[7]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode[8]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode[9]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode[10]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode[11]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode[12]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode[13]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode[14]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode[15]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode[16]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode[17]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode[18]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode[19]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode[20]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode[21]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode[22]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode[23]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode[24]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode[25]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode[26]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode[27]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode[28]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode[29]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode[30]
+set_instance_assignment -name VIRTUAL_PIN ON -to prode[31]
+
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -1,0 +1,29 @@
+// 32 registers x 32 bits. rst is active low.
+module register_file (
+    input  logic        clk, rst,
+    input  logic [4:0]  A1, A2, A3,
+    input  logic [31:0] WD3,
+    input  logic        WE3,
+    output logic [31:0] RD1, RD2,
+    output logic [31:0] prode
+);
+    logic [31:0] rf_regs [0:31];
+    integer i;
+
+    always_ff @(posedge clk or negedge rst) begin
+        if (!rst) begin
+            for (i = 0; i < 32; i = i + 1)
+                rf_regs[i] <= i;
+        end else if (WE3 && (A3 != 5'd0)) begin
+            rf_regs[A3] <= WD3;
+        end
+    end
+
+    assign RD1   = rf_regs[A1];
+    assign RD2   = rf_regs[A2];
+    // PRELAB - always observe R1
+	 // assign prode = rf_regs[1];
+	 
+	 // IN-LAB - observe R10 for SUB; otherwise observe R1
+	 assign prode = (A3 == 5'd10) ? rf_regs[10] : rf_regs[1];
+endmodule
