@@ -1,0 +1,94 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/user/Desktop/Lab6_Prelab/simulation/qsim
+vPC
+Z1 !s110 1794329563
+!i10b 1
+!s100 ]_h6Uj?]M5VH?F9Jnl5JZ2
+I;=LI6?A5HeZCWSfO35Smk1
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+R0
+w1794329562
+8swc70.vo
+Fswc70.vo
+L0 32
+Z3 OV;L;10.3d;59
+r1
+!s85 0
+31
+!s108 1794329563.090123
+!s107 swc70.vo|
+!s90 -work|work|swc70.vo|
+!i113 1
+Z4 o-work work
+n@p@c
+vPC_vlg_check_tst
+R1
+!i10b 1
+!s100 Am90gO48Fmk>aaM`zFhM21
+ITFj@WESU_bPEjz8^AzYP40
+R2
+R0
+Z5 w1794329560
+Z6 8waveform_PC_inlab.vwf.vt
+Z7 Fwaveform_PC_inlab.vwf.vt
+L0 68
+R3
+r1
+!s85 0
+31
+Z8 !s108 1794329563.200323
+Z9 !s107 waveform_PC_inlab.vwf.vt|
+Z10 !s90 -work|work|waveform_PC_inlab.vwf.vt|
+!i113 1
+R4
+n@p@c_vlg_check_tst
+vPC_vlg_sample_tst
+R1
+!i10b 1
+!s100 aem8a>z<Z2Vz7CQjEbE1S0
+IXi>UBgN1kN7jn]TjnM7b]3
+R2
+R0
+R5
+R6
+R7
+L0 30
+R3
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R4
+n@p@c_vlg_sample_tst
+vPC_vlg_vec_tst
+R1
+!i10b 1
+!s100 R65zUzEldf7R3>Xg4Yo2O0
+IYcYdXc_Tdde;S3aj59P0Z1
+R2
+R0
+R5
+R6
+R7
+L0 960
+R3
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R4
+n@p@c_vlg_vec_tst

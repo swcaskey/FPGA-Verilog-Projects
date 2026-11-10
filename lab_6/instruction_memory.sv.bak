@@ -1,0 +1,45 @@
+// Lab 6 PRELAB. Six slots; each instruction remains 32 bits.
+// Standard MIPS ADD/SUB/LW/SW encodings match slide 5.
+// BEQ is the lab's special encoding, not standard MIPS BEQ.
+module instruction_memory (
+    input  logic        clk, rst,
+    input  logic [2:0]  A_sw,
+    input  logic [3:0]  beq_sw,
+    output logic [31:0] RD
+);
+    // PRELAB: actual last digit of board 540 is 0.
+    // The IN-LAB zero-to-nine replacement will be applied in the later update.
+    localparam logic [3:0] BEQ_DIGIT = 4'd0;
+    logic [31:0] ins_regs [0:5];
+    logic [2:0] internal_addr;
+
+    always_comb begin
+        internal_addr = 3'd0;
+        if (A_sw < 3'd5)
+            internal_addr = A_sw;
+        else if ((A_sw == 3'd5) && (beq_sw == BEQ_DIGIT) &&
+                 (ins_regs[5][15:0] >= 16'd1) &&
+                 (ins_regs[5][15:0] <= 16'd4))
+            internal_addr = ins_regs[5][2:0];
+        // Unmatched BEQ, or invalid slot 6/7: fetch slot 0 (no writes).
+    end
+
+    always_ff @(posedge clk or negedge rst) begin
+        if (!rst) begin
+            ins_regs[0] <= 32'd0;
+            // LW: memory[R2 + 3] -> R1. memory[5] starts at 5.
+            ins_regs[1] <= 32'b100011_00010_00001_0000000000000011;
+            // SW: R1 -> memory[R8 + 1]. Run LW first to store 5 at memory[9].
+            ins_regs[2] <= 32'b101011_01000_00001_0000000000000001;
+            // ADD: R3 + R4 -> R1, result 7.
+            ins_regs[3] <= 32'b000000_00011_00100_00001_00000_100000;
+            // SUB: R10 - R8 -> R1, result 2.
+            ins_regs[4] <= 32'b000000_01010_01000_00001_00000_100010;
+            // Modified BEQ: target is instruction-memory slot 1 (LW).
+            ins_regs[5] <= 32'b000000_00000_00000_0000000000000001;
+            RD <= 32'd0;
+        end else begin
+            RD <= ins_regs[internal_addr];
+        end
+    end
+endmodule
